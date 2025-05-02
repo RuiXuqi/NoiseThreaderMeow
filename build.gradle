@@ -1,5 +1,4 @@
 plugins {
-    id 'eclipse'
     id 'idea'
     id 'net.minecraftforge.gradle' version "${forge_gradle_version}"
     id 'org.spongepowered.mixin' version "${mixin_gradle_version}"
@@ -17,17 +16,36 @@ minecraft {
 
 repositories {
     flatDir { dirs 'libs' }
-    maven { url = 'https://www.cursemaven.com' }
+    maven {
+        url 'https://maven.cleanroommc.com'
+    }
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', includes: ['*jar'])
+
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation "org.spongepowered:mixin:${mixin_version}"
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 
-    implementation fg.deobf("curse.maven:fermiumbooter-${fermiumbooter_version}")
-    implementation fg.deobf("curse.maven:openterraingenerator-${openterraingenerator_version}")
+    // ForgeGradle:
+    implementation ('zone.rong:mixinbooter:10.6') {
+        transitive = false
+    }
+    annotationProcessor ('zone.rong:mixinbooter:10.6') {
+        transitive = false
+    }
+
+    // RetroFuturaGradle:
+    //String mixinBooter = modUtils.enableMixins('zone.rong:mixinbooter:10.6')
+    // modUtils.enableMixins('zone.rong:mixinbooter:10.6', 'mod_id.mixins.refmap.json') << add refmap name as 2nd arg (optional)
+    //api (mixinBooter) {
+    //    transitive = false
+    //}
+    //annotationProcessor (mixinBooter) {
+    //    transitive = false
+    //}
 }
 
 mixin {

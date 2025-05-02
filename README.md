@@ -1,3 +1,3 @@
-NoiseThreader
+A fork of NoiseThreader that use mixinbooter instead of meaningless FermiumBooter.
 
-A 1.12.2 mod to add multithreading to multiple noise generators to improve world generation performance with more cores
+Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli Loli 
