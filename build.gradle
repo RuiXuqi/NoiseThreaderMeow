@@ -19,6 +19,9 @@ repositories {
     maven {
         url 'https://maven.cleanroommc.com'
     }
+    maven {
+        url = 'https://www.cursemaven.com'
+    }
 }
 
 dependencies {
@@ -46,6 +49,9 @@ dependencies {
     //annotationProcessor (mixinBooter) {
     //    transitive = false
     //}
+
+    implementation fg.deobf("curse.maven:bettercaves-${bettercaves_version}")
+    implementation fg.deobf("curse.maven:openterraingenerator-${openterraingenerator_version}")
 }
 
 mixin {

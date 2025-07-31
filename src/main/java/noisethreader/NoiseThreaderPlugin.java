@@ -41,6 +41,16 @@ public class NoiseThreaderPlugin implements IFMLLoadingPlugin, ILateMixinLoader 
 
 	@Override
 	public List<String> getMixinConfigs() {
-		return Loader.isModLoaded("openterraingenerator") ? Arrays.asList("mixins.noisethreader.vanilla.json","mixins.noisethreader.otg.json") : Collections.singletonList("mixins.noisethreader.vanilla.json");
+		List<String> mixins = new ArrayList<>();
+		mixins.add("mixins.noisethreader.vanilla.json");
+
+		if (Loader.isModLoaded("openterraingenerator")) {
+			mixins.add("mixins.noisethreader.otg.json");
+		}
+		if (Loader.isModLoaded("bettercaves")) {
+			mixins.add("mixins.noisethreader.bettercaves.json");
+		}
+
+		return mixins;
 	}
 }
