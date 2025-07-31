@@ -65,7 +65,8 @@ processResources {
             'version': mod_version,
             'mcversion': minecraft_version,
             'mod_description': mod_description,
-            'mod_author': mod_author
+            'mod_author': mod_author,
+            'mod_url': mod_url
     ]
 
     inputs.properties replaceProperties
