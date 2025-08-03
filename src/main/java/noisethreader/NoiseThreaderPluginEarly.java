@@ -44,16 +44,6 @@ public class NoiseThreaderPluginEarly implements IFMLLoadingPlugin, IEarlyMixinL
 
 	@Override
 	public List<String> getMixinConfigs() {
-		List<String> mixins = new ArrayList<>();
-		mixins.add("mixins.noisethreader.vanilla.json");
-
-		if (Loader.isModLoaded("openterraingenerator")) {
-			mixins.add("mixins.noisethreader.otg.json");
-		}
-		if (Loader.isModLoaded("bettercaves")) {
-			mixins.add("mixins.noisethreader.bettercaves.json");
-		}
-
 		return Collections.singletonList("mixins.noisethreader.vanilla.json");
 	}
 }
