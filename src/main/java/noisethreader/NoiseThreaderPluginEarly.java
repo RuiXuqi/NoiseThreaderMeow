@@ -1,15 +1,18 @@
 package noisethreader;
 
-import java.util.*;
-
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
-import zone.rong.mixinbooter.ILateMixinLoader;
+import zone.rong.mixinbooter.IEarlyMixinLoader;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 @IFMLLoadingPlugin.MCVersion("1.12.2")
-public class NoiseThreaderPlugin implements IFMLLoadingPlugin, ILateMixinLoader {
+public class NoiseThreaderPluginEarly implements IFMLLoadingPlugin, IEarlyMixinLoader {
 
-	public NoiseThreaderPlugin() {
+	public NoiseThreaderPluginEarly() {
 	}
 
 	@Override
@@ -51,6 +54,6 @@ public class NoiseThreaderPlugin implements IFMLLoadingPlugin, ILateMixinLoader 
 			mixins.add("mixins.noisethreader.bettercaves.json");
 		}
 
-		return mixins;
+		return Collections.singletonList("mixins.noisethreader.vanilla.json");
 	}
 }
