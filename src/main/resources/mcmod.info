@@ -8,7 +8,7 @@
   "url": "${mod_url}",
   "updateUrl": "",
   "authorList": ${mod_author},
-  "credits": "",
+  "credits": "${mod_credits}",
   "logoFile": "",
   "dependencies": []
 }
