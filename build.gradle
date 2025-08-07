@@ -17,7 +17,7 @@ minecraft {
 repositories {
     flatDir { dirs 'libs' }
     maven {
-        url 'https://maven.cleanroommc.com'
+        url = 'https://maven.cleanroommc.com'
     }
     maven {
         url = 'https://www.cursemaven.com'
@@ -31,24 +31,8 @@ dependencies {
 
     implementation "org.spongepowered:mixin:${mixin_version}"
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
-
-    // ForgeGradle:
-    implementation ('zone.rong:mixinbooter:10.6') {
-        transitive = false
-    }
-    annotationProcessor ('zone.rong:mixinbooter:10.6') {
-        transitive = false
-    }
-
-    // RetroFuturaGradle:
-    //String mixinBooter = modUtils.enableMixins('zone.rong:mixinbooter:10.6')
-    // modUtils.enableMixins('zone.rong:mixinbooter:10.6', 'mod_id.mixins.refmap.json') << add refmap name as 2nd arg (optional)
-    //api (mixinBooter) {
-    //    transitive = false
-    //}
-    //annotationProcessor (mixinBooter) {
-    //    transitive = false
-    //}
+    implementation ('zone.rong:mixinbooter:10.6') { transitive = false }
+    annotationProcessor ('zone.rong:mixinbooter:10.6') { transitive = false }
 
     implementation fg.deobf("curse.maven:bettercaves-${bettercaves_version}")
     implementation fg.deobf("curse.maven:openterraingenerator-${openterraingenerator_version}")
